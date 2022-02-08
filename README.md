@@ -6,6 +6,7 @@ Note: The Prosses May be for Other OS but this game works on all platforms if co
   1) GCC
   2) Tremianl
   3) Basic Knoladge Using The Termonal
+
 To Compile the Source Code to bianary, one has follow these steps bellow. How Ever this step only Applies to Linux Desktops/Laptops
   1) Download the Maths.c file
   2) Open The directory in Terminal
