@@ -748,6 +748,7 @@ int main()
     char * MyFirstName;
     char * MySecondName;
     int MemoryLocationAccrossMyName;
+    int MemoryLocationAccrossYourName = 0;
     int FindMatchAccorssMyNames = 0;
     int FoundMatchingName;
 
@@ -1026,6 +1027,25 @@ int main()
 
         }
 
+    int SeeYourNameInMemory;
+    printf("Do you wany to see how your name looks accross the Memory & how It Is Stored? 1 for Yes & anything for No ");
+    scanf("%d",&SeeYourNameInMemory);
+    switch (SeeYourNameInMemory)
+    {
+    case 1:
+    printf("This Is How Your Name Looks Accorss Memory. \n");
+    printf("\n");
+    while (MemoryLocationAccrossYourName != strlen(yourName) )
+    {
+        printf("Letter %c for your name %s is stored in Memory Loaction %p \n",yourName[MemoryLocationAccrossYourName],yourName,&yourName[MemoryLocationAccrossYourName]);
+        MemoryLocationAccrossYourName++;
+    }
+    printf("\n");
+    break;
+    default:
+    printf("Okay, ");
+    break;
+    }
     printf("You Have Rached The End %s! You Can Run This Program Again If You Want! \n" , yourName);
 
     return 0;
