@@ -11,112 +11,112 @@ void functionAddEasy(char * yourName)
     
     while (repeat == 1)
     {
-    int trial = 3;
-    
-    int numberA = 64 * (rand() / (RAND_MAX + 2.0));
-    int numberB = 32 * (rand() / (RAND_MAX + 2.0));
-
-    printf("%d + %d = ",numberA,numberB);
-    scanf("%d",&answerTwo);
-    
-    if (answerTwo == numberA + numberB)
-    {
-        printf("🎉 You Are Right %s! 🎉 \n", yourName);
-        //
-    }
-    else
-    {
-        while (numberA + numberB != answerTwo && trial > 0)
-        {
+        int trial = 6;
         
-        printf("You Are Wrong %s! 😟 \n", yourName);
-        printf("Try Again, You Have %d Tries Left \n", trial);
+        int numberA = 64 * (rand() / (RAND_MAX + 2.1));
+        int numberB = 32 * (rand() / (RAND_MAX + 2.4));
+
         printf("%d + %d = ",numberA,numberB);
         scanf("%d",&answerTwo);
-        trial = trial - 1;
-        //exit(1);
-
-        }
-        switch (trial)
-        {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberA + numberB);
-            break;
         
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
+        if (answerTwo == numberA + numberB)
+        {
+            printf("🎉 You Are Right %s! 🎉 \n", yourName);
+            //
         }
-    }
-    
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
-    
+        else
+        {
+            while (numberA + numberB != answerTwo && trial > 0)
+            {
+            
+                printf("You Are Wrong %s! 😟 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%d + %d = ",numberA,numberB);
+                scanf("%d",&answerTwo);
+                trial = trial - 1;
+            //exit(1);
+
+            }
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %d \n", numberA + numberB);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+        }
+        
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
+        
     }
     printf("Okay \n");
 }
 
 void functionAddHard(char * yourName)
 {
-    int answerThree;
+    float answerThree;
     int repeat = 1;
 
     while (repeat == 1)
     {
-    int trial = 3;
+        int trial = 6;
 
-    int numberC = (rand() / (RAND_MAX + 2.0)) * 4098;
-    int numberD = (rand() / (RAND_MAX + 2.0)) * 4098;
-    //int numberCAndNumberD = numberC + numberD;
-    
-    while (numberC == numberD || numberC == 0 || numberD == 0)
-    {
-
-    int numberC = (rand() / (RAND_MAX + 8.0)) * 4098;
-    int numberD = (rand() / (RAND_MAX + 8.0)) * 4098;
+        float numberC = (rand() / (RAND_MAX + 2.0)) * 4098;
+        float numberD = (rand() / (RAND_MAX + 2.0)) * 4098;
+        //int numberCAndNumberD = numberC + numberD;
         
-    }
-    
-    printf("%d + %d = ",numberC,numberD);
-    scanf("%d",&answerThree);
+        while (numberC == numberD || numberC == 0 || numberD == 0)
+        {
 
-    if (answerThree == numberD + numberC)
-    {
-        printf("🎉 You Are Right %s! 🎉 \n", yourName);
-        //
-    }
-    else
-    {
-        while (numberC + numberD != answerThree && trial > 0)
-        {
-        printf("You Are Wrong %s! 💩 \n", yourName);
-        printf("Try Again, You Have %d Tries Left \n", trial);
-        printf("%d + %d = ",numberC,numberD);
-        scanf("%d",&answerThree);
-        trial = trial - 1;
-        //exit(1);
+        float numberC = (rand() / (RAND_MAX + 8.0)) * 4098;
+        float numberD = (rand() / (RAND_MAX + 8.0)) * 4098;
+            
         }
-        switch (trial)
-        {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberC + numberD);
-            break;
         
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
+        printf("%f + %f = ",numberC,numberD);
+        scanf("%f",&answerThree);
+
+        if (answerThree == numberD + numberC)
+        {
+            printf("🎉 You Are Right %s! 🎉 \n", yourName);
+            //
         }
-    }
-    
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
-    
+        else
+        {
+            while (numberC + numberD != answerThree && trial > 0)
+            {
+            printf("You Are Wrong %s! 💩 \n", yourName);
+            printf("Try Again, You Have %d Tries Left \n", trial);
+            printf("%f + %f = ",numberC,numberD);
+            scanf("%f",&answerThree);
+            trial = trial - 1;
+            //exit(1);
+            }
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %f \n", numberC + numberD);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+        }
+        
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
+        
     }
     printf("Okay \n");    
 }
@@ -128,49 +128,49 @@ void functionSubstractEasy(char * yourName)
     
     while (repeat == 1)
     {       
-    int trial = 3;
-    
-    int numberE = (rand() / (RAND_MAX + 1.0)) * 27;
-    int numberF = (rand() / (RAND_MAX + 1.0)) * 19;
+        int trial = 6;
+        
+        int numberE = (rand() / (RAND_MAX + 1.0)) * 27;
+        int numberF = (rand() / (RAND_MAX + 1.0)) * 19;
 
-    printf("%d - %d = ", numberE , numberF);
-    scanf("%d", &answerFive);
-
-    if (answerFive == numberE - numberF)
-    {
-        printf("🎊 You Are Right %s! 🎊 \n", yourName);
-        //        
-    }
-    else
-    {
-        while (numberE - numberF != answerFive && trial > 0)
-        {
-        printf("You Are Wrong %s! 😶 \n", yourName);
-        printf("Try Again, You Have %d Tries Left \n", trial);
         printf("%d - %d = ", numberE , numberF);
         scanf("%d", &answerFive);
-        //exit(1);
-        trial = trial - 1;
-        }
-        
-        switch (trial)
-        {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberE - numberF);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
-        }
-        
-    }   
 
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+        if (answerFive == numberE - numberF)
+        {
+            printf("🎊 You Are Right %s! 🎊 \n", yourName);
+            //        
+        }
+        else
+        {
+            while (numberE - numberF != answerFive && trial > 0)
+            {
+            printf("You Are Wrong %s! 😶 \n", yourName);
+            printf("Try Again, You Have %d Tries Left \n", trial);
+            printf("%d - %d = ", numberE , numberF);
+            scanf("%d", &answerFive);
+            //exit(1);
+            trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %d \n", numberE - numberF);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+            
+        }   
+
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
 
     }
     printf("Okay \n");    
@@ -179,62 +179,62 @@ void functionSubstractEasy(char * yourName)
 
 void functionSubstractHard(char * yourName)
 {
-    int answerSix;
+    float answerSix;
     int repeat = 1;
 
     while (repeat == 1)
     {
-    int trial = 3;
-    
-    int numberG = (rand() / (RAND_MAX + 2.0)) * 4098;
-    int numberH = (rand() / (RAND_MAX + 2.0)) * 4098;
-
-    while (numberG == numberH || numberG == 0 || numberH == 0)
-    {
-
-    int numberG = (rand() / (RAND_MAX + 4.0)) * 4098;
-    int numberH = (rand() / (RAND_MAX + 4.0)) * 4098;
+        int trial = 6;
         
-    }
-    
-    printf("%d - %d = ", numberH ,numberG);
-    scanf("%d", &answerSix);
+        float numberG = (rand() / (RAND_MAX + 2.0)) * 4098;
+        float numberH = (rand() / (RAND_MAX + 2.0)) * 4098;
 
-    if (answerSix == numberH - numberG)
-    {
-        printf("🎊 You Are Right %s! 🎊 \n", yourName);
-        //                
-    }
-        else
+        while (numberG == numberH || numberG == 0 || numberH == 0)
         {
-        while (numberH - numberG != answerSix && trial > 0)
-        {
-            printf("You Are Wrong %s! 😑 \n", yourName);
-            printf("Try Again, You Have %d Tries Left \n", trial);
-            printf("%d - %d = ", numberH , numberG);
-            scanf("%d", &answerSix);
-            trial = trial - 1;
+
+        float numberG = (rand() / (RAND_MAX + 4.0)) * 4098;
+        float numberH = (rand() / (RAND_MAX + 4.0)) * 4098;
+            
         }
         
-        switch (trial)
+        printf("%f - %f = ", numberH ,numberG);
+        scanf("%f", &answerSix);
+
+        if (answerSix == numberH - numberG)
         {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberH - numberG);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
+            printf("🎊 You Are Right %s! 🎊 \n", yourName);
+            //                
         }
-    
-        //exit(1);
-    }
-    
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+            else
+            {
+            while (numberH - numberG != answerSix && trial > 0)
+            {
+                printf("You Are Wrong %s! 😑 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f - %f = ", numberH , numberG);
+                scanf("%f", &answerSix);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %f \n", numberH - numberG);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+        
+            //exit(1);
+        }
+        
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
 
     }
 
@@ -251,49 +251,49 @@ void functionMultplyEasy(char * yourName)
     while (repeat == 1)
     {
     
-    int trial = 3;
+        int trial = 6;
 
-    int numberI = (rand() / (RAND_MAX + 1.0)) * 21;
-    int numberJ = (rand() / (RAND_MAX + 1.0)) * 12;
-    
-    printf("%d * %d = ", numberI , numberJ);
-    scanf("%d", &answerEight);
+        int numberI = (rand() / (RAND_MAX + 1.0)) * 21;
+        int numberJ = (rand() / (RAND_MAX + 1.0)) * 12;
+        
+        printf("%d * %d = ", numberI , numberJ);
+        scanf("%d", &answerEight);
 
-    if (answerEight == numberJ * numberI)
-    {
-        printf("🎊 You Are Right %s! 🎉 \n", yourName);
-        //              
-    }
-        else
-    {
-        while (numberJ * numberI == answerEight || trial > 0)
+        if (answerEight == numberJ * numberI)
         {
-            printf("You Are Wrong %s! 😂 \n", yourName);
-            printf("Try Again, You Have %d Tries Left \n", trial);
-            printf("%d * %d = ", numberI , numberJ);
-            scanf("%d", &answerEight);
-            trial = trial - 1;
+            printf("🎊 You Are Right %s! 🎉 \n", yourName);
+            //              
+        }
+            else
+        {
+            while (numberJ * numberI == answerEight || trial > 0)
+            {
+                printf("You Are Wrong %s! 😂 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%d * %d = ", numberI , numberJ);
+                scanf("%d", &answerEight);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %d \n", numberJ * numberI);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+            
+            //exit(1);
         }
         
-        switch (trial)
-        {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberJ * numberI);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
-        }
-        
-        //exit(1);
-    }
-    
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
     
     }
     printf("Okay \n");    
@@ -301,64 +301,64 @@ void functionMultplyEasy(char * yourName)
 
 void functionMultplyHard(char * yourName)
 {
-    int answerNine;
+    float answerNine;
 
     int repeat = 1;
 
     while (repeat == 1)
     {
-    
-    int trial = 3;
+        
+        int trial = 6;
 
-    int numberK = (rand() / (RAND_MAX + 1.0)) * 512;
-    int numberL = (rand() / (RAND_MAX + 1.0)) * 512;
-    
-    printf("%d * %d = ", numberK , numberL);
-    scanf("%d", &answerNine);
+        float numberK = (rand() / (RAND_MAX + 1.0)) * 512;
+        float numberL = (rand() / (RAND_MAX + 1.0)) * 512;
+        
+        printf("%f * %f = ", numberK , numberL);
+        scanf("%f", &answerNine);
 
-    while (numberK == 1 || numberL == 1 || numberK == 2 || numberL == 2 || numberK * numberL < 25)
-    {
-
-    int numberK = (rand() / (RAND_MAX + 1.0)) * 512;
-    int numberL = (rand() / (RAND_MAX + 1.0)) * 512;
-
-    }
-    
-
-    if (answerNine == numberK * numberL)
-    {
-        printf("🎉 You Are Right %s! 🎊 \n", yourName);
-        //                
-    }
-        else
-    {
-        while (numberK * numberL != answerNine && trial > 0)
+        while (numberK == 1 || numberL == 1 || numberK == 2 || numberL == 2 || numberK * numberL < 25)
         {
-            printf("You Are Wrong %s! 🤪 \n", yourName);
-            printf("Try Again, You Have %d Tries Left \n", trial);
-            printf("%d * %d = ", numberK , numberL);
-            scanf("%d", &answerNine);
-            trial = trial - 1;
+
+            int numberK = (rand() / (RAND_MAX + 1.0)) * 512;
+            int numberL = (rand() / (RAND_MAX + 1.0)) * 512;
+
         }
         
-        switch (trial)
+
+        if (answerNine == numberK * numberL)
         {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %d \n", numberL * numberK);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
+            printf("🎉 You Are Right %s! 🎊 \n", yourName);
+            //                
+        }
+            else
+        {
+            while (numberK * numberL != answerNine && trial > 0)
+            {
+                printf("You Are Wrong %s! 🤪 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f * %f = ", numberK , numberL);
+                scanf("%f", &answerNine);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %f \n", numberL * numberK);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+
         }
 
-    }
-
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
 
     }
 
@@ -368,54 +368,57 @@ void functionMultplyHard(char * yourName)
 
 void functionDivisionEasy(char * yourName)
 {
-    double answerTen;
+    float answerTen;
 
     int repeat = 1;
 
     while (repeat == 1)
     {
-    
-    int trial = 3;
-
-    double numberM = (rand() / (RAND_MAX + 1.0)) * 12;
-    double numberN = (rand() / (RAND_MAX + 1.0)) * 9;
-
-    printf("%lf / %lf = ", numberM, numberN);
-    scanf("%lf", &answerTen);
-
-    if (answerTen == numberM / numberN)
-    {
-        printf("🎊 You Are Right %s! 🎉 \n", yourName);
-    }
-        else
-    {
-        while (numberM / numberN != answerTen && trial > 0)
-        {
-            printf("You Are Wrong %s! 😞 \n", yourName);
-            printf("Try Again, You Have %d Tries Left \n", trial);
-            printf("%lf / %lf = ", numberM, numberN);
-            scanf("%lf", &answerTen);
-            trial = trial - 1;
-        }
         
-        switch (trial)
+        int trial = 6;
+
+        int AnumberM = (rand() / (RAND_MAX + 1.0)) * 36;
+        int AnumberN = (rand() / (RAND_MAX + 1.0)) * 24;
+
+        float numberM = (float)AnumberM;
+        float numberN = (float)AnumberN;
+
+        printf("%f / %f = ", numberM, numberN);
+        scanf("%f", &answerTen);
+
+        if (answerTen == numberM / numberN)
         {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %lf \n", numberM / numberN);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
+            printf("🎊 You Are Right %s! 🎉 \n", yourName);
+        }
+            else
+        {
+            while (numberM / numberN != answerTen && trial > 0)
+            {
+                printf("You Are Wrong %s! 😞 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f / %f = ", numberM, numberN);
+                scanf("%f", &answerTen);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %f \n", numberM / numberN);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }
+
         }
 
-    }
-
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
 
     }
 
@@ -425,63 +428,63 @@ void functionDivisionEasy(char * yourName)
 
 void functionDivisionHard(char * yourName)
 {
-    double answerEleven;
+    float answerEleven;
 
     int repeat = 1;
 
     while (repeat == 1)
     {
-    
-    int trial = 3;
 
-    double numberO = (rand() / (RAND_MAX + 3.6)) * 128;
-    double numberP = (rand() / (RAND_MAX + 3.6)) * 128;
+        int trial = 6;
 
-    printf("%lf / %lf = ", numberO, numberP);
-    scanf("%lf", &answerEleven);
+        float numberO = (rand() / (RAND_MAX + 3.6)) * 128;
+        float numberP = (rand() / (RAND_MAX + 3.6)) * 128;
 
-    while (numberO == numberP || numberO == 1 || numberP == 1)
-    {
+        printf("%f / %f = ", numberO, numberP);
+        scanf("%f", &answerEleven);
 
-    double numberO = (rand() / (RAND_MAX + 3.6)) * 128;
-    double numberP = (rand() / (RAND_MAX + 3.6)) * 128;
-
-    }
-    
-
-    if (answerEleven == numberO / numberP)
-    {
-        printf("🎉 You Are Right %s! 🎊 \n", yourName);
-    }
-        else
-    {
-        while (numberO / numberP != answerEleven && trial > 0)
+        while (numberO == numberP || numberO == 1 || numberP == 1)
         {
-            printf("You Are Wrong %s! 🤯 \n", yourName);
-            printf("Try Again, You Have %d Tries Left \n", trial);
-            printf("%lf / %lf = ", numberO, numberP);
-            scanf("%lf", &answerEleven);
-            trial = trial - 1;
+
+            float numberO = (rand() / (RAND_MAX + 3.6)) * 128;
+            float numberP = (rand() / (RAND_MAX + 3.6)) * 128;
+
         }
         
-        switch (trial)
-        {
-        case 0:
-            printf("You Failed %s! \n", yourName);
-            printf("The Answer Is %lf \n",numberO / numberP);
-            break;
-        
-        default:
-            printf("You Passed %s! \n", yourName);
-            break;
-        }        
-        
-    }
 
-    printf("Want To Try Again? \n");
-    printf("1 for Yes & anything for No ");
-    scanf("%d", &repeat);
-    repeat;
+        if (answerEleven == numberO / numberP)
+        {
+            printf("🎉 You Are Right %s! 🎊 \n", yourName);
+        }
+            else
+        {
+            while (numberO / numberP != answerEleven && trial > 0)
+            {
+                printf("You Are Wrong %s! 🤯 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f / %f = ", numberO, numberP);
+                scanf("%f", &answerEleven);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+            case 0:
+                printf("You Failed %s! \n", yourName);
+                printf("The Answer Is %f \n",numberO / numberP);
+                break;
+            
+            default:
+                printf("You Passed %s! \n", yourName);
+                break;
+            }        
+            
+        }
+
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
 
     }
 
@@ -497,7 +500,7 @@ void functionPowerEasy(char * yourName)
 
     while (repeat == 1)
     {
-        int trial = 3;
+        int trial = 6;
 
         int numberQ = 8 * (rand() / (RAND_MAX + 1.0));
         int numberR = 8 * (rand() / (RAND_MAX + 1.0));
@@ -554,25 +557,25 @@ void functionPowerEasy(char * yourName)
 
 void functionPowerHard(char * yourName)
 {
-    double answerFifteen;
+    float answerFifteen;
 
     int repeat = 1;
     
     while (repeat == 1)
     {
-        int trial = 3;
+        int trial = 6;
 
-        double numberS = 32 * (rand() / (RAND_MAX + 3.2));
-        double numberT = 32 * (rand() / (RAND_MAX + 3.2));
+        float numberS = 32 * (rand() / (RAND_MAX + 3.2));
+        float numberT = 32 * (rand() / (RAND_MAX + 3.2));
 
         while (pow(numberS , numberT) < 50)
         {
-            double numberS = 32 * (rand() / (RAND_MAX + 4.6));
-            double numberT = 32 * (rand() / (RAND_MAX + 4.6));
+            float numberS = 32 * (rand() / (RAND_MAX + 4.6));
+            float numberT = 32 * (rand() / (RAND_MAX + 4.6));
         }
         
-        printf("%lf ^ %lf = " , numberS , numberT);
-        scanf("%lf", &answerFifteen);
+        printf("%f ^ %f = " , numberS , numberT);
+        scanf("%f", &answerFifteen);
 
         if (pow(numberS , numberT) == answerFifteen)
         {
@@ -584,15 +587,15 @@ void functionPowerHard(char * yourName)
             {
                 printf("You Are Wrong %s! 🤮 \n", yourName);
                 printf("Try Again, You Have %d Tries Left \n", trial);
-                printf("%lf ^ %lf = ", numberS, numberT);
-                scanf("%lf", &answerFifteen);
+                printf("%f ^ %f = ", numberS, numberT);
+                scanf("%f", &answerFifteen);
                 trial = trial - 1;
             }
             switch (trial)
             {
             case 0:
                 printf("You Failed! \n");
-                printf("The Answer is %lf \n",pow(numberS,numberT));
+                printf("The Answer is %f \n",pow(numberS,numberT));
                 break;
             
             default:
@@ -612,11 +615,127 @@ void functionPowerHard(char * yourName)
 
 }
 
+void functionPercentageEasy(char * yourName)
+{
+    float answerSixteen;
+    
+    int repeat = 1;
+
+    while (repeat == 1)
+    {
+        int trial = 6;
+
+        int AnumberU = 64 * (rand() / (RAND_MAX + 8.4));
+        int AnumberV = 98 * (rand() / (RAND_MAX + 5.6));
+
+        float numberU = (float)AnumberU;
+        float numberV = (float)AnumberV;
+
+        printf("%f%% of %f = ",numberV,numberU);
+        scanf("%f",&answerSixteen);
+        
+        float answerNumUOfNumV = (numberU / 100) * numberV;
+
+        if (answerSixteen == answerNumUOfNumV)
+        {
+            printf("🎉 You Are Right %s! 🎉 \n", yourName);
+        }
+        else
+        {
+            while (answerSixteen != answerNumUOfNumV && trial > 0)
+            {
+                printf("You Are Wrong %s! 😟 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f%% of %f = ",numberV,numberU);
+                scanf("%f",&answerSixteen);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+                case 0: 
+                    printf("You Failed %s! \n", yourName); 
+                    printf("The Answer Is %f \n", answerNumUOfNumV); 
+                break;
+
+                default: 
+                    printf("You Passed %s! \n", yourName); 
+                break;
+            }
+        }
+
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
+
+    }
+    printf("Okay \n");
+}
+
+void functionPercentageHard(char * yourName)
+{
+    float answerSeventeen;
+    
+    int repeat = 1;
+
+    while (repeat == 1)
+    {
+        int trial = 6;
+
+        float numberW = 4098 * (rand() / (RAND_MAX + 8.4));
+        float numberX = 128 * (rand() / (RAND_MAX + 5.6));
+
+        printf("%f%% of %f = ",numberW,numberX);
+        scanf("%f",&answerSeventeen);
+        
+        float answerNumWOfNumX = (numberW / 100) * numberX;
+
+        if (answerSeventeen == answerNumWOfNumX)
+        {
+            printf("🎉 You Are Right %s! 🎉 \n", yourName);
+        }
+        else
+        {
+            while (answerSeventeen != answerNumWOfNumX && trial > 0)
+            {
+                printf("You Are Wrong %s! 😟 \n", yourName);
+                printf("Try Again, You Have %d Tries Left \n", trial);
+                printf("%f%% of %f = ",numberW,numberX);
+                scanf("%f",&answerSeventeen);
+                trial = trial - 1;
+            }
+            
+            switch (trial)
+            {
+                case 0: 
+                    printf("You Failed %s! \n", yourName); 
+                    printf("The Answer Is %f \n", answerNumWOfNumX); 
+                break;
+
+                default: 
+                    printf("You Passed %s! \n", yourName); 
+                break;
+            }
+        }
+
+        printf("Want To Try Again? \n");
+        printf("1 for Yes & anything for No ");
+        scanf("%d", &repeat);
+        repeat;
+
+    }
+    printf("Okay \n");
+}
+
 int main()
 {
     time_t theTime = time(NULL);
     struct tm *aTime = localtime(&theTime);    
     srand(time(NULL));
+    int checkAccrossMyNames = 0;
+    int FoundMatch = -64 ;
+    int answerEightteen;
     int answerFourteen;
     int answerSeven;
     char yourName[256];
@@ -629,10 +748,22 @@ int main()
     int currentMonth = aTime->tm_mon + 1;
     int currentYear = aTime->tm_year + 1900;
     int again = 512;
-    
+    int GenerateMyName;
 
-    char * myNames[] = {"Kenway", "Austen", "Kate", "Alex", "Lucy", "Nicky", "Micky", "Edward", "Biden", "Snowden", "Josif", "Linda", "Marry", "Elezabet", "Redington", "John", "Creg", "Conner", "Abraham", "Antony", "Loyyd"};
-    int randNum = 20 * (rand() / (RAND_MAX + 2.0));
+    char * MyNameGenerated = malloc(5);
+    GenerateMyName = GenerateMyName = 65 + ((rand() / (RAND_MAX + 3.6)) * 25);
+    MyNameGenerated[0] = GenerateMyName;
+    GenerateMyName = GenerateMyName = 98 + ((rand() / (RAND_MAX + 3.6)) * 25);
+    MyNameGenerated[1] = GenerateMyName;
+    GenerateMyName = GenerateMyName = 98 + ((rand() / (RAND_MAX + 3.6)) * 25);
+    MyNameGenerated[2] = GenerateMyName;
+    GenerateMyName = GenerateMyName = 98 + ((rand() / (RAND_MAX + 3.6)) * 25);
+    MyNameGenerated[3] = GenerateMyName;
+    GenerateMyName = GenerateMyName = 98 + ((rand() / (RAND_MAX + 3.6)) * 25);
+    MyNameGenerated[4] = '\0';
+
+    char * myNames[] = {"Kenway", "Austen", "Kate", "Alex", "Lucy", "Nicky", "Micky", "Edward", "Biden", "Snowden", "Josif", "Linda", "Marry", "Elezabet", "Redington", "John", "Creg", "Conner", "Abraham", "Antony", "Loyyd", MyNameGenerated};
+    int randNum = 21 * (rand() / (RAND_MAX + 1.9));
 
     printf("It's day %d of the Month. Stored in Memory Location %p \n", currentDay, &currentDay);
     printf("It's Month %d of the Year. Stored in Memory Location %p \n", currentMonth, &currentMonth);
@@ -644,8 +775,28 @@ int main()
     printf("Hello There! My Name Is %s, Tell me Your Name ", myNames[randNum]);
     fgets(yourName, 256, stdin);
     yourName[strlen(yourName)-1] = '\0';
-    printf("Okay %s, This Is A Math Game. I will Give You an Equation & you will solve it! \n", yourName);
+
+    while (checkAccrossMyNames < 22 && FoundMatch != 0)
+    {
+        FoundMatch = strncmp(myNames[checkAccrossMyNames],yourName,strlen(yourName));
+        checkAccrossMyNames++;
+    }
     
+    if (strncmp(myNames[randNum],yourName,strlen(yourName)) == 0)
+    {
+        printf("You and I Have The same name! \n");
+        printf("Okay Me, This Is A Math Game. I will Give You an Equation & you will solve it! \n");
+    }
+    else if (FoundMatch == 0)
+    {
+        printf("I think I Know You!!! \n");
+        printf("Okay %s, This Is A Math Game. I will Give You an Equation & you will solve it! \n", yourName);
+    }
+    else
+    {
+        printf("Okay %s, This Is A Math Game. I will Give You an Equation & you will solve it! \n", yourName);
+    }
+
     printf("\n");
     printf("\n");
 
@@ -657,19 +808,9 @@ int main()
         
         {
 
-            printf(" 1 Addition  2 Subtraction  3 Multiplication  4 Division  5 Power ");
+            printf(" 1 Addition  2 Subtraction  3 Multiplication  4 Division  5 Power  6 Percantage ");
             scanf("%d", &answerOne);
 
-            while (answerOne < 1 && answerOne > 5 && tries > 0 && answerOne != 0)
-            {
-                printf("Your Input Was't Valid! Try Again! \n");
-                printf("You Have %d tries to get it right or a 0 to exit! after Too many wrong input ithe program will exit it self! \n" , tries);
-                printf(" 1 Addition  2 Subtraction  3 Multiplication  4 Division  5 Power ");
-                scanf("%d", &answerOne);
-                tries = tries - 1;
-                tries;
-            }
-            
             switch (answerOne)
             {
 
@@ -824,6 +965,31 @@ int main()
                 
                 break;
             
+            case 6:
+                printf("Percantage it is, Do You Want It Easy Or Hard? \n");
+                printf(" 1  Easy  or  2  Hard ");
+
+                scanf("%d",&answerEightteen);
+                switch (answerEightteen)
+                {
+                case 1:
+                    
+                    functionPercentageEasy(yourName);
+
+                    break;
+                
+                case 2:
+
+                    functionPercentageHard(yourName);
+
+                    break;
+                
+                default:
+                    break;
+                }
+                
+                break;
+            
             default:
                 printf("Invalid Input, Exiting. ");
                 break;
@@ -835,7 +1001,14 @@ int main()
 
         }
 
-    printf("You Have Rached The End %s! You Can Run This Program Again If You Want! \n" , yourName);
-
+    if (strncmp(myNames[randNum],yourName,strlen(yourName)) == 0)
+    {
+        printf("You Have Rached The End Me! You Can Run This Program Again If You Want! This Is You, Signing Out. \n" );
+    }
+    else
+    {
+        printf("You Have Rached The End %s! You Can Run This Program Again If You Want! This Is %s, Signing Out. \n" , yourName,myNames[randNum]);
+    }
+    
     return 0;
 }
